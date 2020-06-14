@@ -17,4 +17,5 @@ shotty uses the configuration file created by the AWS cli. e.g.,
 First activate the virtual environment, then run the script
 
 `pipenv shell`
+
 `python shotty/shotty.py`
