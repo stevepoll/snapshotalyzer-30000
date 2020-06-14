@@ -18,4 +18,8 @@ First activate the virtual environment, then run the script
 
 `pipenv shell`
 
-`python shotty/shotty.py`
+`python shotty/shotty.py <command> [--project=PROJECT]`
+
+*command* is list, start, or stop
+
+*project* is optional
