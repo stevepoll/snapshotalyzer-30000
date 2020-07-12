@@ -24,6 +24,7 @@ def has_pending_snapshot(volume):
 def cli():
   """Shotty manages snapshots"""
 
+
 @cli.group('snapshots')
 def snapshots():
   """Commands for snapshots"""
@@ -51,6 +52,8 @@ def list_snapshots(project, list_all):
 
         if s.state == 'completed' and not list_all: break
   # End list_snapshots
+# End snapshots group
+
 
 @cli.group('volumes')
 def volumes():
@@ -73,6 +76,8 @@ def list_volumes(project):
         v.encrypted and 'Encrypted' or 'Not Encrypted'
       )))
   # End list_volumes
+#End volumes group  
+
 
 @cli.group('instances')
 def instances():
@@ -152,7 +157,8 @@ def start_instances(project):
       print("Could not start {0}. ".format(i.id) + str(e))
       continue
   # End start_instances
-  
+# End instances group  
+
 
 if __name__ == '__main__':
   cli()
